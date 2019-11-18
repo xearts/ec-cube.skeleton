@@ -1,0 +1,2 @@
+parameters:
+    eccube_src_dir: '%kernel.project_dir%/vendor/ec-cube/ec-cube/src'

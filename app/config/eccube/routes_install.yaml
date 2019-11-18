@@ -1,0 +1,3 @@
+controllers:
+    resource: ../../vendor/ec-cube/ec-cube/src/Eccube/Controller/Install/
+    type: annotation
