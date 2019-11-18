@@ -1,5 +1,5 @@
 <?php
-namespace Xearts\Eccube\Skeleton;
+namespace Eccube\Skeleton;
 
 use Composer\Factory;
 use Composer\IO\IOInterface;
@@ -32,8 +32,9 @@ final class Install
     private function recursiveJob(string $path, callable $job) : void
     {
         $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path), \RecursiveIteratorIterator::SELF_FIRST);
+        /** @var \SplFileObject $file */
         foreach ($iterator as $file) {
-            if (! in_array($file->getExtension(), ['php', 'md'], true)) {
+            if (!in_array($file->getExtension(), ['php', 'md'], true) && $file->getPathname() !== "{$path}/bin/console") {
                 continue;
             }
             $job($file);
@@ -50,13 +51,14 @@ final class Install
             'autoload' => ['psr-4' => ["{$vendor}\\{$package}\\" => 'src/']],
 //            'autoload-dev' => ['psr-4' => ["{$vendor}\\{$package}\\" => 'tests/']],
             'scripts' => \array_merge($composerJson['scripts'], [
+                'post-install-cmd' => ['@auto-scripts']
             ]),
         ]);
         unset(
 //            $composerJson['autoload']['files'],
-//            $composerJson['scripts']['pre-install-cmd'],
+            $composerJson['scripts']['pre-install-cmd'],
 //            $composerJson['scripts']['pre-update-cmd'],
-            $composerJson['scripts']['post-create-project-cmd'],
+//            $composerJson['scripts']['post-create-project-cmd'],
             $composerJson['require-dev']['composer/composer']
         );
 

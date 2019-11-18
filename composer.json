@@ -1,5 +1,5 @@
 {
-    "name": "xearts/ec-cube.skelton",
+    "name": "xearts/ec-cube.skeleton",
     "type": "project",
     "require": {
         "php": "^7.1.3",
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Eccube\\Skelton\\": "src",
+            "Eccube\\Skeleton\\": "src",
             "Eccube\\Entity\\": "app/proxy/entity",
             "Customize\\": "app/Customize",
             "Plugin\\": "app/Plugin"
@@ -32,7 +32,7 @@
     },
     "autoload-dev" : {
         "psr-4": {
-            "Eccube\\Tests\\" : "tests/Eccube/Tests"
+            "Eccube\\Tests\\" : "vendor/ec-cube/ec-cube/tests/Eccube/Tests"
         }
     },
     "scripts": {
@@ -52,6 +52,7 @@
             "eccube:fixtures:load": "bin/console eccube:fixtures:load"
         },
         "post-install-cmd": [
+            "composer dump-autoload",
             "@auto-scripts"
         ],
         "post-update-cmd": [

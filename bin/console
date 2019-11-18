@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Eccube\Skelton\Eccube\Kernel;
+use Eccube\Skeleton\Eccube\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\Console\Input\ArgvInput;

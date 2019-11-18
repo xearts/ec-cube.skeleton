@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace Eccube\Skelton\Eccube;
+namespace Eccube\Skeleton\Eccube;
 
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\DoctrineOrmMappingsPass;
 use Eccube\DependencyInjection\Compiler\WebServerDocumentRootPass;

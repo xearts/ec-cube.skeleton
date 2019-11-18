@@ -1,6 +1,6 @@
 <?php
 
-use Eccube\Skelton\Eccube\Kernel;
+use Eccube\Skeleton\Eccube\Kernel;
 use Symfony\Component\Debug\Debug;
 use Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;

@@ -1,5 +1,5 @@
 <?php
-namespace Xearts\Eccube\Skeleton;
+namespace Eccube\Skeleton;
 
 use Composer\Script\Event;
 
