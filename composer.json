@@ -47,9 +47,7 @@
             "assets:install --symlink --relative public": "symfony-cmd"
         },
         "installer-scripts": {
-            "doctrine:database:create": "bin/console doctrine:database:create",
-            "doctrine:schema:create": "bin/console doctrine:schema:create",
-            "eccube:fixtures:load": "bin/console eccube:fixtures:load"
+            "eccube:install": "bin/console eccube:install"
         },
         "post-install-cmd": [
             "composer dump-autoload",

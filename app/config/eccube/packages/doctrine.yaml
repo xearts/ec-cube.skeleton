@@ -7,7 +7,6 @@ parameters:
     env(DATABASE_SERVER_VERSION): ~
 doctrine:
     dbal:
-        driver: 'pdo_sqlite'
         server_version: "%env(DATABASE_SERVER_VERSION)%"
         charset: utf8
 
@@ -16,7 +15,7 @@ doctrine:
           collate: 'utf8_general_ci'
 
         # With Symfony 3.3, remove the `resolve:` prefix
-        url: 'sqlite:///%kernel.project_dir%/var/eccube.db'
+        url: '%env(DATABASE_URL)%'
 
         # types
         types:

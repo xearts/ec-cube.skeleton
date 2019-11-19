@@ -58,7 +58,7 @@ final class Install
 //            $composerJson['autoload']['files'],
             $composerJson['scripts']['pre-install-cmd'],
 //            $composerJson['scripts']['pre-update-cmd'],
-//            $composerJson['scripts']['post-create-project-cmd'],
+            $composerJson['scripts']['post-create-project-cmd'],
             $composerJson['require-dev']['composer/composer']
         );
 
